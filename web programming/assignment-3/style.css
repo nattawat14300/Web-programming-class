@@ -2,17 +2,19 @@
     display: flex;
     margin: 20px;
     padding: 20px;
+    justify-content: center;
 }
 
 .flex_container img {
-    border-radius: 5%;
     width: 300px;
     border-radius: 15px;
+    text-align: middle;
 }
 
 .DotH {
     font-size: 120%;
     font-style: bold;
+    margin: 1%;
 }
 
 header {
@@ -34,6 +36,7 @@ header {
     width: 100%;
     height: 500px;
     border-radius: 15px;
+    justify-content: center;
 }
 
 h2 {
@@ -56,7 +59,7 @@ h2 {
 .step {
     display: flex;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
     margin: 30px;
 }
 

@@ -3,11 +3,12 @@
    It can span many lines in a CSS file. 
 */
 
+
 /* ==========================================================================
    IMPORTS & GENERAL STYLES
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 body {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-family: 'Outfit', 'Poppins', sans-serif;
@@ -23,35 +24,47 @@ body {
                 radial-gradient(circle at 80% 80%, #a1c4fd 0%, #c2e9fb 100%); */
 }
 
+
 /* ==========================================================================
    LINK PSEUDO-CLASSES (Slide/Topics Link Styling)
    ========================================================================== */
+
+
 /* unvisited link */
+
 a:link {
     color: #3182ce;
     text-decoration: none;
     font-weight: 500;
 }
 
+
 /* visited link */
+
 a:visited {
     color: #805ad5;
 }
 
-/* mouse over link */  
-a:hover { 
+
+/* mouse over link */
+
+a:hover {
     color: #e53e3e;
     text-decoration: underline;
-} 
+}
+
 
 /* active link */
+
 a:active {
     color: #dd6b20;
 }
 
+
 /* ==========================================================================
    CSS WIDTH AND HEIGHT (h1, h2, span, img)
    ========================================================================== */
+
 h1 {
     font-family: 'Poppins', sans-serif;
     background-color: #ebf8ff;
@@ -103,9 +116,11 @@ img {
     max-width: 320px;
 }
 
+
 /* ==========================================================================
    MARGIN AND PADDING
    ========================================================================== */
+
 h1 {
     margin: 20px auto;
     padding: 15px 30px;
@@ -121,9 +136,11 @@ span {
     padding: 8px 16px;
 }
 
+
 /* ==========================================================================
    BORDER & BORDER-RADIUS
    ========================================================================== */
+
 #pokemon_pic {
     width: 25%;
     max-width: 200px;
@@ -134,9 +151,11 @@ span {
     vertical-align: middle;
 }
 
+
 /* ==========================================================================
    VERTICAL ALIGNMENT: MIDDLE COMPARISON (Text & Image)
    ========================================================================== */
+
 .valign-demo-container {
     text-align: left;
     max-width: 700px;
@@ -201,12 +220,16 @@ span {
     margin-right: 12px;
 }
 
+
 /* 1. Default alignment (No vertical-align: middle / baseline) */
+
 .img-default {
     vertical-align: baseline;
 }
 
+
 /* 2. With vertical-align: middle */
+
 .img-middle {
     vertical-align: middle;
 }
@@ -217,11 +240,13 @@ span {
     margin-top: 8px;
 }
 
+
 /* ==========================================================================
    BLOCK CENTERING (ul)
    ========================================================================== */
+
 ul {
-    font-family: Garamond, "Times New Roman", serif; 
+    font-family: Garamond, "Times New Roman", serif;
     font-size: 20pt;
     font-weight: bold;
     font-style: italic;
@@ -230,7 +255,6 @@ ul {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     text-align: left;
-    
     /* Centering the block */
     margin: 30px auto;
     width: 260px;
@@ -242,9 +266,11 @@ ul li {
     color: #5a3e2b;
 }
 
+
 /* ==========================================================================
    POSITION PROPERTY (.parent, .div_display, #one)
    ========================================================================== */
+
 .parent {
     text-align: left;
     max-width: 900px;
@@ -259,7 +285,7 @@ ul li {
     border: 2px solid #319795;
     background-color: #ffffff;
     width: 180px;
-    display: inline-block; 
+    display: inline-block;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
@@ -271,16 +297,18 @@ ul li {
 }
 
 #one {
-    position: fixed; 
+    position: fixed;
     top: 50px;
-    left: 25px; 
+    left: 25px;
     border-color: #d69e2e;
     background-color: #fefcbf;
 }
 
+
 /* ==========================================================================
    FLEXIBLE BOX
    ========================================================================== */
+
 .flex_container {
     display: flex;
     flex-wrap: wrap;
@@ -294,7 +322,7 @@ ul li {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.flex_container > div {
+.flex_container>div {
     background-color: #ffffff;
     border: 2px solid #319795;
     border-radius: 12px;
@@ -304,14 +332,16 @@ ul li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 }
 
-.flex_container > div img {
+.flex_container>div img {
     width: 80%;
     margin: 10px 0;
 }
 
+
 /* ==========================================================================
    TABLE STYLING
    ========================================================================== */
+
 .table_Border {
     border-collapse: collapse;
     width: 90%;
@@ -324,7 +354,8 @@ ul li {
     border: 1px solid #e2e8f0;
 }
 
-.table_Border th, .table_Border td {
+.table_Border th,
+.table_Border td {
     padding: 14px 24px;
     text-align: center;
 }
@@ -352,9 +383,11 @@ ul li {
     background-color: #f7fafc;
 }
 
+
 /* ==========================================================================
    ALIGNMENT & UTILITIES
    ========================================================================== */
+
 .left_page {
     text-align: left;
     max-width: 600px;
@@ -390,35 +423,58 @@ hr {
     text-align: center;
 }
 
+
 /* ==========================================================================
    UI MICRO-INTERACTIONS & VISUAL EFFECTS
    ========================================================================== */
 
+
 /* 1. Global Transition for smooth animation state changes */
-a, button, img, div, .div_display, .flex_container > div, .table_Border tr, .valign-card {
+
+a,
+button,
+img,
+div,
+.div_display,
+.flex_container>div,
+.table_Border tr,
+.valign-card {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+
 /* 2. Hover scaling and rotation effects on Pokemon Images */
-.div_display img:hover, .flex_container > div img:hover, #pokemon_pic:hover, .valign-demo-img:hover {
+
+.div_display img:hover,
+.flex_container>div img:hover,
+#pokemon_pic:hover,
+.valign-demo-img:hover {
     transform: scale(1.15) rotate(4deg);
     filter: drop-shadow(0 8px 16px rgba(49, 130, 206, 0.35));
 }
 
+
 /* 3. Pokedex Card Containers Hover state (Glow, elevation) */
-.div_display:hover, .flex_container > div:hover, .valign-card:hover {
+
+.div_display:hover,
+.flex_container>div:hover,
+.valign-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 18px rgba(49, 130, 206, 0.12);
     border-color: #3182ce;
 }
 
+
 /* 4. Table Row Hover Highlight Effect */
+
 .table_Border tr:hover td {
     background-color: #ebf8ff;
     color: #2b6cb0;
 }
 
+
 /* 5. Custom Button/Link interactions (Tactile active state) */
+
 div a:hover {
     background-color: #2b6cb0;
     /* color: #ffffff;
@@ -435,12 +491,14 @@ div a:active {
     color: #dd6b20;
 }
 
-
-header img, .logo-img {
+header img,
+.logo-img {
     animation: logoPulse 4s infinite ease-in-out;
 }
 
+
 /* 6. Card Layout Design Container */
+
 .card-layout {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
