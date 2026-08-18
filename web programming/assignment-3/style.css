@@ -1,14 +1,34 @@
 .flex_container {
     display: flex;
-    margin: auto;
+    margin: 8.5%;
     padding: 20px 10px;
-    width: 10%;
+    width: 5%;
 }
 
 .flex_container img{
     border-radius: 5%;
+    text-align: middle;
+    width: 500%;
 }
 
 .DotH{
     font-size: 20px ;
+}
+
+header{
+    background-color: brown;
+    -webkit-text-fill-color:whitesmoke ;
+    font-size: 700%;
+    text-align: center;
+    box-shadow: inset;
+}
+
+.MidPic{
+    text-align: center;
+}
+
+h2{
+    background-color: navy;
+    -webkit-text-fill-color: whitesmoke;
+    font-size: 700%;
 }
