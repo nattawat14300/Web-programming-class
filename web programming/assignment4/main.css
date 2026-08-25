@@ -1,50 +1,108 @@
 .grid-container {
+  display: flex;
 
+  grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "sidebar"
+    "footer";
 }
 
-.grid-container > div{
-    
+.grid-container > div {
 }
 
-#header{
-	
+.gridcard {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.25rem;
+  padding: var(--space-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-smooth);
 }
 
-#main1{
-
+#header {
+  grid-column: 1 / span 3;
+  padding: 20px;
 }
 
-#right{
-
+#main1 {
+  grid-column: 2 / span 1;
+  text-align: center;
 }
 
-#footer{
-	
+#main2 {
+  grid-column: 2 / span 1;
+  text-align: center;
+}
+#right {
+  grid-column: 3 / span 1;
+  text-align: center;
+}
+
+#footer {
+  grid-column: 1 / span 3;
+  text-align: center;
+}
+
+#header {
+  grid-area: header;
+  text-align: center;
+}
+#main1 {
+  grid-area: main;
+  text-align: center;
+}
+#main2 {
+  grid-area: main;
+  text-align: center;
+}
+#right {
+  grid-area: sidebar;
+  text-align: center;
+}
+#footer {
+  grid-area: footer;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
-	.grid-container {
-		  
-		  
-	}
+  .grid-container {
+     gap: var(--space-md);
+        /* 
+           การใช้ Fraction Unit (fr):
+           - 1fr 280px : คอลัมน์ซ้ายยืดหยุ่นตามพื้นที่เหลือ (1fr), คอลัมน์ขวา 280px
+        */
+        grid-template-columns: 1fr 280px;
+        grid-template-areas:
+            "header  header"
+            "main1   sidebar"
+            "main2   sidebar"
+            "footer  footer";
+  }
 
-	#header{
-		
-	}
-	#footer{
-	
-	}
+  #header {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #footer {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-	.grid-container {
-		  
-		 
-	}
-	#header{
-		
-	}
-	#footer{
-	
-	}
+  .grid-container {
+  }
+  #header {
+  }
+  #footer {
+  }
+}
+
+.LOGO img {
+  width: 30%;
+  border: navy;
 }
