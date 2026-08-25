@@ -1,0 +1,50 @@
+.grid-container {
+
+}
+
+.grid-container > div{
+    
+}
+
+#header{
+	
+}
+
+#main1{
+
+}
+
+#right{
+
+}
+
+#footer{
+	
+}
+
+@media only screen and (max-width: 768px) {
+	.grid-container {
+		  
+		  
+	}
+
+	#header{
+		
+	}
+	#footer{
+	
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.grid-container {
+		  
+		 
+	}
+	#header{
+		
+	}
+	#footer{
+	
+	}
+}
