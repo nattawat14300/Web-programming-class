@@ -1,108 +1,99 @@
 .grid-container {
-  display: flex;
-
-  grid-template-areas:
-    "header"
-    "menu"
-    "main"
-    "sidebar"
-    "footer";
+    display: grid;
+    grid-template-columns: 14% auto 22%;
+    gap: 18px;
+    max-width: 1300px;
+    margin: 80px;
 }
 
-.grid-container > div {
-}
-
-.gridcard {
-  background: var(--bg-surface);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 1.25rem;
-  padding: var(--space-md);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
-  transition: var(--transition-smooth);
-}
+.grid-container>div {}
 
 #header {
-  grid-column: 1 / span 3;
-  padding: 20px;
+    grid-column: 1 / span 2;
+    text-align: center;
 }
 
 #main1 {
-  grid-column: 2 / span 1;
-  text-align: center;
+    grid-column: 1 / span 2;
+    text-align: left;
 }
 
 #main2 {
-  grid-column: 2 / span 1;
-  text-align: center;
+    grid-column: 1 / span 2;
+    text-align: left;
 }
+
 #right {
-  grid-column: 3 / span 1;
-  text-align: center;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+    text-align: left;
 }
 
 #footer {
-  grid-column: 1 / span 3;
-  text-align: center;
-}
-
-#header {
-  grid-area: header;
-  text-align: center;
-}
-#main1 {
-  grid-area: main;
-  text-align: center;
-}
-#main2 {
-  grid-area: main;
-  text-align: center;
-}
-#right {
-  grid-area: sidebar;
-  text-align: center;
-}
-#footer {
-  grid-area: footer;
-  text-align: center;
+    grid-column: 1 / span 3;
 }
 
 @media only screen and (max-width: 768px) {
-  .grid-container {
-     gap: var(--space-md);
-        /* 
-           การใช้ Fraction Unit (fr):
-           - 1fr 280px : คอลัมน์ซ้ายยืดหยุ่นตามพื้นที่เหลือ (1fr), คอลัมน์ขวา 280px
-        */
-        grid-template-columns: 1fr 280px;
-        grid-template-areas:
-            "header  header"
-            "main1   sidebar"
-            "main2   sidebar"
-            "footer  footer";
-  }
-
-  #header {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  #footer {
-    flex-direction: column;
-    justify-content: flex-end;
-  }
+    .grid-container {}
+    #header {}
+    #footer {}
 }
 
 @media only screen and (max-width: 480px) {
-  .grid-container {
-  }
-  #header {
-  }
-  #footer {
-  }
+    .grid-container {}
+    #header {}
+    #footer {}
 }
 
-.LOGO img {
-  width: 30%;
-  border: navy;
+.gridcard {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    background: darkred;
+}
+
+.main2 img {
+    width: 20%;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex-container2 img {
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    grid-column: 1 / span 3;
+}
+
+.flex-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex-container1 img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    grid-column: 1 / span 3;
+}
+
+header img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
 }
