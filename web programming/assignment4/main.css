@@ -6,8 +6,6 @@
     margin: 80px auto;
 }
 
-.grid-container>div {}
-
 #header {
     grid-column: 1 / span 2;
     text-align: center;
@@ -34,15 +32,79 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .grid-container {}
-    #header {}
-    #footer {}
+    .grid-container {
+        grid-template-columns: auto 28%;
+        gap: 14px;
+        padding: 0 10px;
+    }
+    #header {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    #footer {
+        grid-column: 1 / span 3;
+    }
+    #right {
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 2;
+    }
+    #main1 {
+        grid-column: 1 / span 2;
+        grid-row: 2/ span 1;
+    }
+    #main2 {
+        grid-column: 1 / span 3;
+        grid-row: 3/ span 1;
+    }
+    #main2 img {
+        width: 80px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    .grid-container {}
-    #header {}
-    #footer {}
+    .grid-container {
+        grid-template-columns: auto 28%;
+        gap: 5px;
+    }
+    #header {
+        grid-column: 1 / span 1;
+    }
+    #header img {
+        width: 200px;
+    }
+    #right {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+    #right img {
+        display: flex;
+        width: 90px;
+        height: auto;
+    }
+    #main1 {
+        grid-column: 1 / span 1;
+    }
+    #main1 h1 {
+        text-align: center;
+    }
+    #main1>ul {
+        width: 400px;
+    }
+    #main1 img {
+        width: 200px
+    }
+    #main2>ol {
+        width: 360px;
+    }
+    #main2 {
+        grid-column: 1 / span 1;
+    }
+    #main2 img {
+        width: 20%;
+    }
+    #footer {
+        grid-column: 1 / span 1;
+    }
 }
 
 .gridcard {
@@ -96,4 +158,24 @@ header img {
     width: 50%;
     height: auto;
     border-radius: 10px;
+}
+
+#footer p {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Courier, monospace;
+}
+
+.flex-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex-container3 img {
+    width: 118%;
+    height: auto;
+    border-radius: 10px;
+    grid-column: 1 / span 3;
 }
