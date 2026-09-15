@@ -19,6 +19,7 @@ function pageLoad() {
 }
 
 function validateForm(event) {
+  event.preventDefault();
   const errorMsg = document.getElementById("errormsg");
 
   const username = document.forms["myRegister"]["username"].value.trim();
@@ -38,15 +39,15 @@ function validateForm(event) {
   errorMsg.innerHTML = "";
 
   // 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
-  const savedUsername = localStorage.setItem("userUsername");
-  const savedPassword = localStorage.setItem("userPassword");
+  localStorage.setItem("userUsername",username);
+  localStorage.setItem("userPassword",password);
 
   // เพื่อความปลอดภัย: รหัสผ่านไม่ปรากฏบน Browser Address Bar และ Browser History
 
   alert("ลงทะเบียนสำเร็จ! ระบบบันทึกข้อมูลเรียบร้อย กำลังไปที่หน้า Login");
 
   // 4. นำทางไปหน้า login.html
-  event.preventDefault();
+  
   window.location.href = "login.html";
   return true;
 }
