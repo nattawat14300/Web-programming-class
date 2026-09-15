@@ -21,7 +21,7 @@ function checkLogin(event) {
 
   const storedUsername = localStorage.getItem("userUsername");
   const storedPassword = localStorage.getItem("userPassword");
-   const users = [{ username: "admin", password: "123456" }];
+  const users = [{ username: "admin", password: "123456" }];
   // ถ้ามีข้อมูลใน localStorage ให้นำมาเก็บใส่ Array of Objects
   if (storedUsername && storedPassword) {
     users.push({ username: storedUsername, password: storedPassword });

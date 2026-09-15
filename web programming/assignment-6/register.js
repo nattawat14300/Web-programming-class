@@ -31,6 +31,7 @@ function validateForm(event) {
   const retypePassword = passwords[1].value; // 1. ตรวจสอบว่า Password ทั้ง 2 ช่องตรงกันหรือไม่ ถ้าไม่ตรงกันให้แจ้งเตือน และให้return false
 
   if (password !== retypePassword) {
+    errorMsg.innerHTML = "รหัสผ่า่นไม่ตรงกัน กรอกใหม่อีกครั้ง";
     alert("Password ทั้ง 2 ช่องไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง");
 
     return false;
