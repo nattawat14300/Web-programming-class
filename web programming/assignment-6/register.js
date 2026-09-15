@@ -9,45 +9,46 @@
 window.onload = pageLoad;
 
 function pageLoad() {
-  const form = document.getElementById("myRegister");
+    const form = document.getElementById("myRegister");
 
-  if (form) {
-    form.onsubmit = validateForm;
-  } // ตัวอย่างการอ่านข้อมูลเมื่อเปิดหน้าเว็บ (ถ้ามี Query String หรือ localStorage)
+    if (form) {
+        form.onsubmit = validateForm;
+    } // ตัวอย่างการอ่านข้อมูลเมื่อเปิดหน้าเว็บ (ถ้ามี Query String หรือ localStorage)
 
-  loadStoredData();
+    loadStoredData();
 }
 
 function validateForm(event) {
-  const errorMsg = document.getElementById("errormsg");
+    event.preventDefault(); // ป้องกันหน้าเว็บรีเฟรชเองทันทีเมื่อกดปุ่ม Submit
+    const errorMsg = document.getElementById("errormsg");
 
-  const username = document.forms["myRegister"]["username"].value.trim();
+    const username = document.forms["myRegister"]["username"].value.trim();
 
-  const passwords = document.forms["myRegister"]["password"];
+    const passwords = document.forms["myRegister"]["password"];
 
-  const password = passwords[0].value;
+    const password = passwords[0].value;
 
-  const retypePassword = passwords[1].value; // 1. ตรวจสอบว่า Password ทั้ง 2 ช่องตรงกันหรือไม่ ถ้าไม่ตรงกันให้แจ้งเตือน และให้return false
+    const retypePassword = passwords[1].value; // 1. ตรวจสอบว่า Password ทั้ง 2 ช่องตรงกันหรือไม่ ถ้าไม่ตรงกันให้แจ้งเตือน และให้return false
 
-  if (password !== retypePassword) {
-    alert("Password ทั้ง 2 ช่องไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง");
+    if (password !== retypePassword) {
+        alert("Password ทั้ง 2 ช่องไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง");
 
-    return false;
-  } // 2. เคลียร์ข้อความแจ้งเตือนถ้าผ่านการตรวจสอบ
+        return false;
+    } // 2. เคลียร์ข้อความแจ้งเตือนถ้าผ่านการตรวจสอบ
 
-  errorMsg.innerHTML = "";
+    errorMsg.innerHTML = "";
 
 
-// 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
-  const savedUsername = localStorage.setItem("userUsername");
-  const savedPassword = localStorage.setItem("userPassword");
+    // 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
+    localStorage.setItem("userUsername", username);
+    localStorage.setItem("userPassword", password);
 
-// เพื่อความปลอดภัย: รหัสผ่านไม่ปรากฏบน Browser Address Bar และ Browser History
+    // เพื่อความปลอดภัย: รหัสผ่านไม่ปรากฏบน Browser Address Bar และ Browser History
 
-alert("ลงทะเบียนสำเร็จ! ระบบบันทึกข้อมูลเรียบร้อย กำลังไปที่หน้า Login");
+    alert("ลงทะเบียนสำเร็จ! ระบบบันทึกข้อมูลเรียบร้อย กำลังไปที่หน้า Login");
 
-// 4. นำทางไปหน้า login.html
-event.preventDefault();
-window.location.href = "login.html";
-return true;
+    // 4. นำทางไปหน้า login.html
+
+    window.location.href = "login.html";
+    return true;
 }
