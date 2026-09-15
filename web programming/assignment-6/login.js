@@ -41,7 +41,7 @@ function checkLogin(event) {
   // 5. ใช้ for loop วนหาใน Array ว่ามี username และ password ที่ตรงกับที่เรากรอกหรือไม่
   let isLoginSuccess = false;
   for (let i = 0; i < users.length; i++) {
-    if (users[i].username === username && users[i].password === password) {
+    if (users[i].username === usernameInput && users[i].password === passwordInput) {
       isLoginSuccess = true;
       break;
     }
