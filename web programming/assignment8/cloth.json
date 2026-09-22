@@ -1,10 +1,53 @@
 [
-	{
-		"brand": "A.K.O.O Clothing",
-		"price":"200",
-		"img":"top1.jpg"},
-	{
-		"brand": "B.K.T Clothing",
-		"price":"500",
-		"img":"top2.jpg"}
-	]
+  {
+    "brand": "A.K.O.O Clothing",
+    "price": "200",
+    "img": "pic/top1.jpg"
+  },
+  {
+    "brand": "B.K.T Clothing",
+    "price": "500",
+    "img": "pic/top2.jpg"
+  },
+
+  {
+    "brand": "B.K.T Clothing",
+    "price": "500",
+    "img": "pic/top3.jpg"
+  },
+
+  {
+	"brand": "STAR COMMAND",
+	"price": "450",
+	"img": "pic/top4.jpg"
+  },
+
+  {
+	"brand":"Hariku",
+	"price":"512",
+	"img":"pic/top5.jpg"
+  },
+  {
+	"brand":"ARJAN-DANG",
+	"price" : "222",
+	"img" : "pic/top6.jpg"
+  },
+
+  {
+	"brand":"MOJO",
+	"price" : "262",
+	"img" : "pic/top7.jpg"
+  },
+
+  {
+	"brand":"MENTO",
+	"price" : "853",
+	"img" : "pic/top8.jpg"
+  },
+
+  {
+	"brand":"POLOGRAM",
+	"price" : "299",
+	"img" : "pic/top9.jpg"
+  }
+]
