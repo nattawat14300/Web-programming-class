@@ -30,18 +30,36 @@ function validateForm(event) {
 
     const retypePassword = passwords[1].value; // 1. ตรวจสอบว่า Password ทั้ง 2 ช่องตรงกันหรือไม่ ถ้าไม่ตรงกันให้แจ้งเตือน และให้return false
 
+    HEAD
     if (password !== retypePassword) {
         alert("Password ทั้ง 2 ช่องไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง");
 
-        return false;
-    } // 2. เคลียร์ข้อความแจ้งเตือนถ้าผ่านการตรวจสอบ
+        if (password !== retypePassword) {
+            errorMsg.innerHTML = "รหัสผ่า่นไม่ตรงกัน กรอกใหม่อีกครั้ง";
+            alert("Password ทั้ง 2 ช่องไม่ตรงกัน กรุณาตรวจสอบอีกครั้ง");
 
-    errorMsg.innerHTML = "";
+            return false;
+        } // 2. เคลียร์ข้อความแจ้งเตือนถ้าผ่านการตรวจสอบ
 
+        errorMsg.innerHTML = "";
 
-    // 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
-    localStorage.setItem("userUsername", username);
-    localStorage.setItem("userPassword", password);
+        // 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
+        localStorage.setItem("userUsername", username);
+        localStorage.setItem("userPassword", password);
+
+        // 3. บันทึกข้อมูลลงใน localStorage ทีละตัว
+        localStorage.setItem("userUsername", username);
+        localStorage.setItem("userPassword", password);
+
+        // เพื่อความปลอดภัย: รหัสผ่านไม่ปรากฏบน Browser Address Bar และ Browser History
+
+        alert("ลงทะเบียนสำเร็จ! ระบบบันทึกข้อมูลเรียบร้อย กำลังไปที่หน้า Login");
+
+        // 4. นำทางไปหน้า login.html
+
+        window.location.href = "login.html";
+        return true;
+    }
 
     // เพื่อความปลอดภัย: รหัสผ่านไม่ปรากฏบน Browser Address Bar และ Browser History
 
