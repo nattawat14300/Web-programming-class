@@ -1,0 +1,645 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HTML
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    background: #1C1C1C;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 35px 25px 40px;
+    background: linear-gradient( 135deg, #000000 0%, #054E2E 34%, #005B33 50%, #0A0A0A 100%);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    color: #7AC900;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 23px;
+    border-radius: 22px;
+    background: linear-gradient( 90deg, #78C900, #00A94F);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.navbar a:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+
+/* =====================================================
+   PROFILE / HERO
+===================================================== */
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: 390px;
+    margin-bottom: 65px;
+    padding: 0 20px;
+}
+
+
+/* =====================================================
+   PROFILE TEXT
+===================================================== */
+
+.profile-text {
+    padding-left: 0;
+    flex: 1;
+}
+
+
+/* Name */
+
+.name {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+
+/* Student ID */
+
+.student-id {
+    margin-top: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* University */
+
+.university {
+    margin-top: 25px;
+    color: #A8D400;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-picture {
+    width: 370px;
+    height: 370px;
+    flex-shrink: 0;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient( 135deg, #D9EA00, #8DC900);
+}
+
+.profile-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0;
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section {
+    scroll-margin-top: 30px;
+    margin-bottom: 65px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 12px 28px;
+    background: linear-gradient( 90deg, #70C900, #00A849);
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 2px;
+}
+
+
+/* =====================================================
+   ABOUT ME
+===================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 18px;
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   ABOUT CARD
+===================================================== */
+
+.about-card {
+    min-height: 202px;
+    padding: 20px 23px;
+    border-radius: 24px;
+    background: linear-gradient( 135deg, #00A943 0%, #007E45 45%, #063C2D 100%);
+}
+
+
+/* =====================================================
+   ABOUT HEADING
+===================================================== */
+
+.about-card h3 {
+    margin-bottom: 8px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   ABOUT LIST
+===================================================== */
+
+.about-card ul {
+    padding-left: 24px;
+}
+
+.about-card li {
+    margin-bottom: 7px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+
+/* =====================================================
+   INTEREST CARD
+===================================================== */
+
+.about-card.interest {
+    grid-column: 1 / 3;
+    width: 55%;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   MY WORK
+===================================================== */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 30px;
+    justify-items: center;
+}
+
+
+/* Project */
+
+.project {
+    width: 100%;
+    max-width: 380px;
+}
+
+
+/* Project Image */
+
+.project img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+
+/* Project Name */
+
+.project a {
+    display: block;
+    position: relative;
+    width: 92%;
+    margin: -10px auto 0;
+    padding: 9px 12px;
+    border-radius: 18px;
+    background: linear-gradient( 90deg, #A6C900, #003F29);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.3;
+    z-index: 2;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+
+/* Project Hover */
+
+.project a:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+}
+
+
+/* Last Project */
+
+.project-last {
+    grid-column: 1 / 3;
+}
+
+
+/* =====================================================
+   SEE MORE
+===================================================== */
+
+.see-more {
+    display: block;
+    margin: 30px auto 0;
+    padding: 8px 30px;
+    border: 2px solid #6ABF00;
+    border-radius: 20px;
+    background: transparent;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.see-more:hover {
+    background: #6ABF00;
+    color: #003A25;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    margin-bottom: 0;
+}
+
+
+/* Social Container */
+
+.social-container {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+/* Social */
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 50%;
+    min-height: 60px;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: filter 0.2s ease;
+}
+
+
+/* Facebook */
+
+.facebook {
+    background: linear-gradient( 90deg, #163ECA, #00A56B);
+}
+
+
+/* Instagram */
+
+.instagram {
+    background: linear-gradient( 90deg, #00A56B, #A90083);
+}
+
+
+/* Social Icon */
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+    color: #1353D4;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Instagram Icon */
+
+.instagram .social-icon {
+    color: #E00087;
+}
+
+
+/* Social Hover */
+
+.social:hover {
+    filter: brightness(1.15);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+    .portfolio {
+        max-width: 100%;
+        padding: 35px 40px 35px;
+    }
+    .header {
+        gap: 25px;
+    }
+    .logo {
+        font-size: 40px;
+    }
+    .navbar {
+        gap: 8px;
+    }
+    .navbar a {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    /* Profile */
+    .profile {
+        min-height: 320px;
+        gap: 25px;
+        padding: 0 10px;
+    }
+    .profile-picture {
+        width: 280px;
+        height: 280px;
+    }
+    .name {
+        font-size: 23px;
+    }
+    .student-id {
+        font-size: 15px;
+    }
+    .university {
+        font-size: 35px;
+    }
+    /* About */
+    .about-card {
+        min-height: 180px;
+        padding: 18px;
+    }
+    .about-card h3 {
+        font-size: 21px;
+    }
+    .about-card li {
+        font-size: 17px;
+    }
+    .about-card.interest {
+        width: 60%;
+    }
+    .project {
+        max-width: 320px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .portfolio {
+        padding: 25px 25px 20px;
+    }
+    /* Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .navbar {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 7px;
+    }
+    .navbar a {
+        font-size: 8px;
+        padding: 5px 10px;
+    }
+    /* Profile */
+    .profile {
+        gap: 15px;
+        min-height: auto;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        padding: 4px;
+    }
+    .name {
+        font-size: 12px;
+    }
+    .student-id {
+        font-size: 7px;
+    }
+    .university {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    /* Section */
+    .section {
+        margin-bottom: 40px;
+    }
+    .section-title {
+        font-size: 17px;
+        padding: 8px 17px;
+        margin-bottom: 14px;
+    }
+    /* About */
+    .about-grid {
+        gap: 10px;
+    }
+    .about-card {
+        min-height: 95px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .about-card h3 {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    .about-card li {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+    .about-card.interest {
+        width: 100%;
+    }
+    /* Work */
+    .project-grid {
+        column-gap: 15px;
+        row-gap: 18px;
+    }
+    .project {
+        max-width: 100%;
+    }
+    .project a {
+        font-size: 8px;
+        padding: 6px 8px;
+    }
+    /* See More */
+    .see-more {
+        font-size: 8px;
+        padding: 6px 22px;
+    }
+    /* Contact */
+    .social {
+        min-height: 45px;
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+    .social-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+    .portfolio {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .logo {
+        font-size: 26px;
+    }
+    .navbar a {
+        padding: 4px 7px;
+        font-size: 7px;
+    }
+    .profile-picture {
+        width: 95px;
+        height: 95px;
+    }
+    .university {
+        font-size: 17px;
+    }
+    .section-title {
+        font-size: 15px;
+    }
+    .project-grid {
+        column-gap: 10px;
+    }
+}
