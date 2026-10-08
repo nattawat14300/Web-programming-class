@@ -1,0 +1,367 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HTML
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+    background: #071B14;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 20px 25px 60px;
+    background: linear-gradient( 135deg, #001C13 0%, #004D30 45%, #063C2D 100%);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    color: #7AC900;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   MY PROJECT PAGE
+===================================================== */
+
+.project-page {
+    margin-top: 10px;
+    margin-bottom: 65px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 22px;
+    background: linear-gradient( 90deg, #70C900, #00A849);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 2px;
+}
+
+
+/* =====================================================
+   PROJECT LIST
+===================================================== */
+
+.my-project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.my-project-card {
+    position: relative;
+    width: 75%;
+    max-width: 560px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient( 135deg, #A6C900 0%, #4C8C13 35%, #003F29 100%);
+}
+
+
+/* =====================================================
+   MAIN PROJECT IMAGE
+===================================================== */
+
+.project-main-image {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 15px;
+    background: #D9D9D9;
+}
+
+
+/* =====================================================
+   PROJECT TITLE
+===================================================== */
+
+.my-project-title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+    min-height: 65px;
+    margin: -22px auto 18px;
+    padding: 12px 18px;
+    border-radius: 13px;
+    background: linear-gradient( 90deg, #A6C900 0%, #4C8C13 45%, #003F29 100%);
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   PROJECT IMAGES
+===================================================== */
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+
+/* Individual Image */
+
+.project-images img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #D9D9D9;
+}
+
+
+/* =====================================================
+   PROJECT DESCRIPTION
+===================================================== */
+
+.project-description {
+    width: 92%;
+    margin: 25px auto 0;
+    padding: 0 8px;
+}
+
+.project-description p {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.45;
+    text-align: left;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+    .portfolio {
+        max-width: 100%;
+        padding: 25px 40px 50px;
+    }
+    .header {
+        gap: 25px;
+    }
+    .logo {
+        font-size: 40px;
+    }
+    .navbar {
+        gap: 8px;
+    }
+    .navbar a {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    /* Project */
+    .my-project-card {
+        width: 80%;
+    }
+    .project-main-image {
+        height: 320px;
+    }
+    .my-project-title {
+        font-size: 17px;
+        min-height: 60px;
+    }
+    .project-images img {
+        height: 170px;
+    }
+    .project-description p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .portfolio {
+        padding: 15px 20px 40px;
+    }
+    /* Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .navbar {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+    .navbar a {
+        padding: 5px 10px;
+        font-size: 8px;
+    }
+    /* Section */
+    .section-title {
+        font-size: 15px;
+        padding: 8px 16px;
+        margin-bottom: 15px;
+    }
+    /* Project List */
+    .my-project-list {
+        gap: 50px;
+        margin-top: 15px;
+    }
+    /* Project Card */
+    .my-project-card {
+        width: 94%;
+        padding-bottom: 20px;
+        border-radius: 13px;
+    }
+    /* Main Image */
+    .project-main-image {
+        height: 250px;
+        border-radius: 12px;
+    }
+    /* Project Title */
+    .my-project-title {
+        width: 92%;
+        min-height: 55px;
+        margin-top: -18px;
+        margin-bottom: 15px;
+        padding: 9px 12px;
+        font-size: 14px;
+        border-radius: 11px;
+    }
+    /* Inner Images */
+    .project-images {
+        width: 92%;
+        gap: 10px;
+    }
+    .project-images img {
+        height: 150px;
+        border-radius: 10px;
+    }
+    /* Description */
+    .project-description {
+        width: 92%;
+        margin-top: 20px;
+        padding: 0 5px;
+    }
+    .project-description p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+    .portfolio {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .logo {
+        font-size: 26px;
+    }
+    .navbar a {
+        padding: 4px 7px;
+        font-size: 7px;
+    }
+    .my-project-card {
+        width: 95%;
+    }
+    .project-main-image {
+        height: 220px;
+    }
+    .project-images img {
+        height: 130px;
+    }
+    .my-project-title {
+        font-size: 12px;
+    }
+    .project-description p {
+        font-size: 13px;
+        line-height: 1.35;
+    }
+}
