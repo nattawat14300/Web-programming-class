@@ -1,0 +1,208 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+    padding: 50px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient( 135deg, #000000 0%, #054E2E 34%, #005B33 50%, #0A0A0A 100%);
+}
+
+
+/* =====================================================
+   BLOG CONTAINER
+===================================================== */
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   TOP / BLOG TITLE
+===================================================== */
+
+#top {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    border-radius: 15px;
+    background: linear-gradient( 90deg, #70C900, #00A849);
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+hr {
+    margin: 25px 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient( 90deg, transparent, #7AC900, transparent);
+}
+
+
+/* =====================================================
+   TOPIC
+===================================================== */
+
+#topic {
+    min-height: 180px;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient( 135deg, rgba(0, 169, 79, 0.95), rgba(0, 63, 41, 0.98));
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   REPLY
+===================================================== */
+
+#reply1,
+#reply2 {
+    min-height: 120px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient( 135deg, rgba(0, 126, 69, 0.95), rgba(0, 55, 38, 0.98));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+#message {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    margin-top: 20px;
+    padding: 18px;
+    resize: vertical;
+    border: 2px solid #23864D;
+    border-radius: 15px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.95);
+    color: #123;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   TEXTAREA FOCUS
+===================================================== */
+
+#message:focus {
+    border-color: #A6D500;
+    box-shadow: 0 0 0 4px rgba(166, 213, 0, 0.2);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button {
+    min-width: 110px;
+    margin-top: 15px;
+    margin-right: 8px;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 22px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   POST BUTTON
+===================================================== */
+
+#button1 {
+    background: linear-gradient( 90deg, #A6D500, #00A94F);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#button1:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   CLEAR BUTTON
+===================================================== */
+
+#button2 {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#button2:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.25);
+    filter: brightness(1.1);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+    #top {
+        min-height: 65px;
+        padding: 0 18px;
+        font-size: 26px;
+    }
+    #topic {
+        min-height: 140px;
+        padding: 20px;
+    }
+    #reply1,
+    #reply2 {
+        min-height: 100px;
+        padding: 18px;
+    }
+    #message {
+        min-height: 130px;
+        font-size: 14px;
+    }
+    button {
+        min-width: 95px;
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+}

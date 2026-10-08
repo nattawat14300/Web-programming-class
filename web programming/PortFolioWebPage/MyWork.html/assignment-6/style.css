@@ -1,0 +1,300 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient( 135deg, #000000 0%, #054E2E 34%, #005B33 50%, #0A0A0A 100%);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+form {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* =====================================================
+   FIELDSET
+===================================================== */
+
+fieldset {
+    position: relative;
+    padding: 35px 40px 40px;
+    border: 2px solid #67C900;
+    border-radius: 20px;
+    background: linear-gradient( 135deg, rgba(0, 126, 69, 0.95), rgba(0, 55, 38, 0.97));
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45), inset 0 0 25px rgba(0, 255, 120, 0.05);
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+legend {
+    padding: 8px 25px;
+    border-radius: 20px;
+    background: linear-gradient( 90deg, #78C900, #00A94F);
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+fieldset {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    height: 42px;
+    margin: 5px 0 15px;
+    padding: 8px 12px;
+    border: 2px solid #23864D;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.95);
+    color: #123;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-color: #A6D500;
+    box-shadow: 0 0 0 3px rgba(166, 213, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   RADIO BUTTON
+===================================================== */
+
+input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px 0 10px;
+    accent-color: #78C900;
+    vertical-align: middle;
+}
+
+
+/* =====================================================
+   REQUIRED TEXT
+===================================================== */
+
+fieldset span {
+    color: #D8F4D8;
+}
+
+fieldset span:first-of-type {
+    color: #B9D900;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+#errormsg {
+    display: block;
+    min-height: 20px;
+    margin-bottom: 8px;
+    color: #FF7777;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+input[type="submit"],
+input[type="reset"] {
+    height: 42px;
+    padding: 0 25px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+input[type="submit"] {
+    background: linear-gradient( 90deg, #A6D500, #00A94F);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   RESET / CLEAR BUTTON
+===================================================== */
+
+input[type="reset"] {
+    margin-left: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+input[type="reset"]:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.25);
+    filter: brightness(1.1);
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+#myLogin fieldset {
+    min-height: 350px;
+}
+
+
+/* =====================================================
+   REGISTER PAGE
+===================================================== */
+
+#myRegister fieldset {
+    min-height: 650px;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON AREA
+===================================================== */
+
+#registerBtn,
+#resetBtn {
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    form {
+        max-width: 100%;
+    }
+    fieldset {
+        padding: 30px 22px 30px;
+        border-radius: 16px;
+    }
+    legend {
+        font-size: 21px;
+        padding: 7px 20px;
+    }
+    fieldset {
+        font-size: 14px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"] {
+        height: 40px;
+        font-size: 14px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        font-size: 13px;
+        padding: 0 20px;
+    }
+    #myLogin fieldset {
+        min-height: auto;
+    }
+    #myRegister fieldset {
+        min-height: auto;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+    body {
+        padding: 12px;
+    }
+    fieldset {
+        padding: 25px 17px 25px;
+    }
+    legend {
+        font-size: 18px;
+        padding: 6px 16px;
+    }
+    fieldset {
+        font-size: 13px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+        padding: 0 15px;
+        font-size: 12px;
+    }
+}
