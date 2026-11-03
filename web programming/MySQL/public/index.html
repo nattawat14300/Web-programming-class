@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Your data</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div id=container>
+			<form action="/addDB" method="post" accept-charset="utf-8" class="form">
+				<fieldset>
+					<legend>Add data</legend>
+					Please enter a username: <input type="text" name="username" value="" placeholder=""><br>
+					Please enter an email: <input type="text" name="email" value="" placeholder=""><br>
+					<input type="submit" name="submit" value="Add">
+				</fieldset>
+			</form>
+			
+			<form action="/updateDB" method="post" accept-charset="utf-8" class="form">
+				<fieldset>
+					<legend>Update email</legend>
+					Please enter a username: <input type="text" name="username" value="" placeholder=""><br>
+					Please enter a new email: <input type="text" name="email" value="" placeholder=""><br>
+					<input type="submit" name="submit" value="Update">
+				</fieldset>
+			</form>
+			
+			<form action="/deleteDB" method="post" accept-charset="utf-8" class="form">
+				<fieldset>
+					<legend>Delete data</legend>
+					Please enter a username you want to delete: <input type="text" name="username" value="" placeholder=""><br>
+					<input type="submit" name="submit" value="Delete">
+					
+				</fieldset>
+			</form>
+			<button id="showData">Show data</button>
+			<div id="table">
+				
+			</div>
+		</div>
+	</body>
+</html>
