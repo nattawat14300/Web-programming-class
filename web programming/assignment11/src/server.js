@@ -292,7 +292,6 @@ app.post('/api/orders/status', async(req, res) => {
         // ส่งสัญญาณ data:changed ให้ทุก browser โหลดข้อมูลล่าสุด
         io.emit('data:changed', { entity: 'orders' });
         res.json({ message: 'เปลี่ยนสถานะแล้ว' });
-        res.json({ message: 'เปลี่ยนสถานะแล้ว' });
     } catch (err) {
         console.error(err.message);
         res.status(500).json({ message: 'ทำรายการไม่สำเร็จ กรุณาลองใหม่' });
@@ -302,7 +301,7 @@ app.post('/api/orders/status', async(req, res) => {
 // DELETE: Clear โต๊ะ ลบเฉพาะข้อมูลในตาราง current_orders และเก็บข้อมูลในตาราง order_history ไว้
 app.post('/api/tables/clear', async(req, res) => {
     try {
-        const tableNo = req.body.tablenumber;
+        const tableNo = req.body.table_no;
         if (!positiveInteger(tableNo, 5)) {
             return res.status(400).json({ message: 'หมายเลขโต๊ะต้องอยู่ระหว่าง 1–5' });
         }
