@@ -38,7 +38,7 @@ const con = mysql.createConnection(databaseConfig);
 // แปลง con.query แบบ callback ให้ใช้งานร่วมกับ async/await
 const queryDB = (sql) => {
     // complete this
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => { //resolve ใช้ส่งผลลัพธ์เมื่อทำงานสำเร็จ reject ใช้ส่งข้อผิดพลาดเมื่อทำงานไม่สำเร็จ
         con.query(sql, (err, results) => {
             if (err) reject(err);
             else resolve(results);

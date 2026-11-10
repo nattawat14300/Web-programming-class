@@ -245,7 +245,7 @@ async function updateOrderStatus(id, status) {
     const response = await fetch('/api/orders/status', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json', //กำหนด Header ของ Request เพื่อแจ้งให้ Server ทราบว่าข้อมูลที่กำลังส่งไปอยู่ในรูปแบบ JSON
         },
         body: JSON.stringify({
             id: id,
@@ -266,13 +266,13 @@ function requestUpdate() {
     if (socket && socket.connected) {
         socket.emit('request_update');
     } else {
-        refresh();
+        refresh(); //refresh() ใช้เรียก Function สำหรับโหลดข้อมูลใหม่
     }
 }
 
 // โหลดออเดอร์และประวัติออเดอร์ล่าสุดจาก server และแสดงผลในหน้าครัว
 async function refresh() {
-    refreshVersion++;
+    refreshVersion++; //ป็นตัวแปรที่ใช้เก็บหมายเลขรอบการโหลดข้อมูล ++ คือการเพิ่มค่าตัวแปรขึ้น 1
     const version = refreshVersion;
 
     try {

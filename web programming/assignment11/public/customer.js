@@ -27,8 +27,8 @@ const labels = {
 // Function: money()
 // หน้าที่: แปลงตัวเลขให้เป็นรูปแบบสกุลเงินบาท
 const money = (value) =>
-    new Intl.NumberFormat('th-TH', {
-        style: 'currency',
+    new Intl.NumberFormat('th-TH', { //ที่ใช้จัดรูปแบบตัวเลขตามภาษาและภูมิภาค
+        style: 'currency', //บอกว่าต้องการจัดรูปแบบเป็นสกุลเงิน
         currency: 'THB'
     }).format(Number(value));
 
@@ -572,10 +572,6 @@ function connectSocket() {
 }
 
 
-// ==========================================
-// REFRESH DATA
-// ==========================================
-
 
 // Function: refresh()
 // หน้าที่: โหลดเมนูและออเดอร์ล่าสุดจาก Server
@@ -625,9 +621,6 @@ async function refresh() {
 }
 
 
-// ==========================================
-// INITIALIZATION
-// ==========================================
 
 
 // Function: pageLoad()

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ร้านค้า</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <main>
+      <section id="auth">
+        <div class="tabs">
+          <button id="loginTab" class="active" type="button">Login</button
+          ><button id="registerTab" type="button">Register</button>
+        </div>
+        <h1 id="title">เข้าสู่ระบบ</h1>
+        <form id="form">
+          <label id="nameField" hidden
+            >ชื่อ<input name="name" autocomplete="name"
+          /></label>
+          <label
+            >อีเมล<input
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+          /></label>
+          <label
+            >รหัสผ่าน<input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="6"
+              required
+            /><small>อย่างน้อย 6 ตัวอักษร</small></label
+          >
+          <p id="message" role="status"></p>
+          <button class="primary" id="submit" type="submit">Login</button>
+        </form>
+      </section>
+      <section id="shop" hidden>
+        <h1>สินค้า</h1>
+        <div class="products"></div>
+        <p id="shopMessage" role="status"></p>
+        <button id="logout" type="button">ออกจากระบบ</button>
+      </section>
+    </main>
+  </body>
+</html>
