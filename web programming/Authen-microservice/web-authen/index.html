@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ร้านค้า</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <main>
+      <section id="auth">
+        <h1 id="title">เข้าสู่ระบบ</h1>
+        <form id="form" name="form">
+          
+          <label
+            >username<input
+              name="username"
+              type="text"
+              value="admin"
+              required
+          /></label>
+          <label
+            >รหัสผ่าน<input
+              name="password"
+              type="password"
+              value = "123456"
+              autocomplete="current-password"
+              minlength="6"
+              required
+            /><small>อย่างน้อย 6 ตัวอักษร</small></label
+          >
+          <p id="message" role="status"></p>
+          <button class="primary" id="submit" type="submit">Login</button>
+        </form>
+      </section>
+      <section id="result" >
+        <p id="resultMessage"></p>
+        <button class="primary" id="logout" type="submit" hidden>Logout</button>
+      </section> 
+    </main>
+  </body>
+</html>
