@@ -25,7 +25,7 @@ async function register(event) {
     const form = document.getElementById("form");
     const button = document.getElementById("submit");
 
-    button.disabled = true;
+    button.disabled = true;//ป็นการปิดการใช้งานปุ่ม Submit ชั่วคราว เพื่อป้องกันไม่ให้ผู้ใช้กดส่งข้อมูลซ้ำระหว่างที่ระบบกำลังส่ง Request ไปยัง Server
 
     try {
         const output = await fetch("/users/register", {
