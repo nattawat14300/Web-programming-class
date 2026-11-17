@@ -73,7 +73,8 @@ function positiveInteger(value, max = 2147483647) {
 // สร้างตารางที่ยังไม่มี โดยไม่ลบข้อมูลเดิม
 async function initializeTables() {
     await queryDB(
-        `CREATE TABLE IF NOT EXISTS menu_items (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, price DECIMAL(8,2) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4`
+        `CREATE TABLE IF NOT EXISTS menu_items 
+        (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, price DECIMAL(8,2) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4`
     );
 
     await queryDB(`CREATE TABLE IF NOT EXISTS current_orders (

@@ -20,7 +20,7 @@ function setMode(mode) {
 
 // 2. สมัครสมาชิก
 async function register(event) {
-    event.preventDefault();
+    event.preventDefault();//คือคำสั่งใช้ป้องกันไม่ให้ ส่ง form ปกติ และ Refresh เมื่อกดปุ่ม Register
 
     const form = document.getElementById("form");
     const button = document.getElementById("submit");

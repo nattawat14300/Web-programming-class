@@ -17,7 +17,7 @@ const con = mysql.createConnection({
 });
 
 // เปิดการเชื่อมต่อ MySQL
-con.connect(function(err) {
+con.connect(function(err) {//เป็นคำสั่งเริ่มต้นการเชื่อมต่อฐานข้อมูล
     if (err) {
         console.error("เชื่อมต่อฐานข้อมูลไม่สำเร็จ:", err.message);
         return;
@@ -31,7 +31,7 @@ con.connect(function(err) {
     price DECIMAL(10,2) NOT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4`;
 
-    con.query(sql, function(err, result) {
+    con.query(sql, function(err, result) {//ส่งคำสั่ง SQL ไปยัง MySQL
         if (err) {
             console.error("สร้างตาราง product ไม่สำเร็จ:", err.message);
             return;
